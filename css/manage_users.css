@@ -1,0 +1,234 @@
+header {
+    background-color: lightgrey;
+    width: 100%;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    z-index: 5000;
+    position: fixed;
+}
+
+#businessName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#businessName > span {
+    font-size: 30px;
+}
+
+#svgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+#bodyWrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 70px;
+    height: 50px;
+}
+
+#buttonArray {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    top: 10px;
+    margin-right: 10px;
+}
+
+:focus {
+    outline: 0;
+    border-color: #2260ff;
+    box-shadow: 0 0 0 4px #b5c9fc;
+}
+
+.mydict div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    justify-content: center;
+}
+
+.mydict input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.mydict input[type="radio"]:checked + span {
+    box-shadow: 0 0 0 0.0625em #0043ed;
+    background-color: #dee7ff;
+    z-index: 1;
+    color: #0043ed;
+}
+
+label span {
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0.375em .75em;
+    position: relative;
+    margin-left: .0625em;
+    box-shadow: 0 0 0 0.0625em #b5bfd9;
+    letter-spacing: .05em;
+    color: #3e4963;
+    text-align: center;
+    transition: background-color .5s ease;
+}
+
+label:first-child span {
+    border-radius: .375em 0 0 .375em;
+}
+
+label:last-child span {
+    border-radius: 0 .375em .375em 0;
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.cards .colour {
+    background-color: lightgray;
+}
+
+/*todo*/
+.cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: center;
+    height: 100px;
+    width: 150vh;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.cards .card p.second-text {
+    font-size: .7em;
+}
+
+.cards .card:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+    transform: scale(0.9, 0.9);
+}
+
+#cardsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+.manage-user-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-manage-user {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 200px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    margin-right: 15px;
+}
+
+.spn-manage-user {
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+.button-manage-user::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.button-manage-user:hover {
+    color: #fff;
+}
+
+.button-manage-user:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.btn-delete {
+    margin-top: 10px;
+}
+
+.btn-delete:hover {
+    background-color: lightcoral !important;
+}
+
+.btn-delete::before {
+    background: red !important;
+}
+
+.user-svg-wrapper {
+    display: flex;
+    margin-left: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+body {
+    height: 150vh;
+}
